@@ -1,7 +1,14 @@
+.menu-btn-wrap {
+  position: relative;
+}
+
 .menu-btn {
+  position: absolute;
+  top: 10px;
+  right: 86px;
   z-index: 3;
   cursor: pointer;
-  transition: all 1.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .menu-btn .btn-line {
@@ -9,6 +16,24 @@
   height: 3px;
   margin: 0 0 5px 0;
   background: #333;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: #fff;
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background-color: #fff;
 }
 
 * {
@@ -21,7 +46,7 @@ body {
   height: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 40px 40px;
+  padding: 40px;
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.5;
 }
@@ -35,17 +60,31 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
-h1.lg-heading img, h2.lg-heading img, h3.lg-heading img {
-  width: 180px;
+h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  width: 200px;
   height: auto;
+  line-height: 0;
 }
 
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
   margin-bottom: 32px;
 }
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
 .wrapper-header {
+  max-width: 1360px;
   display: flex;
   justify-content: space-between;
+  background-color: red;
 }
 /*# sourceMappingURL=main.css.map */

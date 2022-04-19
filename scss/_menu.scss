@@ -1,5 +1,12 @@
 // Menu Button
+.menu-btn-wrap{
+  position:relative;
+}
 .menu-btn {
+  position:absolute;
+  top: 10px;
+  right:86px;
+
   z-index: 3;
   cursor: pointer;
   @include easeOut;
@@ -9,5 +16,29 @@
     height: 3px;
     margin: 0 0 5px 0;
     background: #333;
+  }
+
+  // Rotate Into X with Menu line ハンバーガーメニューのアニメーション
+  &.close{
+    transform: rotate(180deg);
+
+    .btn-line {
+      // line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px,5px);
+        background-color: #fff;
+      }
+
+      // line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // line 3 -Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px,-6px);
+        background-color: #fff;
+      }
+    }
   }
 }
