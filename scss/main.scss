@@ -1,7 +1,44 @@
-$primary-color: #fff;
-$secondary-color: #333;
+@import 'config';
+@import 'menu';
 
-body{
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   background: $primary-color;
   color: $secondary-color;
+  height: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Headings
+h1, h2, h3 { 
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading img {
+    width: 180px;
+    height: auto;
+    
+  }
+
+  &.sm-heading{
+    margin-bottom: 32px;
+  }
+}
+
+.wrapper-header {
+  display:flex;
+  justify-content: space-between;
 }

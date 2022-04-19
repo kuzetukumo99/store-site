@@ -1,0 +1,6 @@
+$primary-color: #fff;
+$secondary-color: #333;
+
+@mixin easeOut {
+  transition: all 1.5s ease-out;
+}
