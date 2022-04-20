@@ -76,7 +76,6 @@ li{
   padding-top:80px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: repeat(4,1fr);
   grid-template-columns: repeat(4,1fr);
   gap:2.7%;
 
@@ -160,6 +159,72 @@ li{
   margin-top:70px;
   text-align:center;
 }
+
+// About ページ
+.about-wrapper {
+  max-width: 600px;
+  padding-top:80px;
+
+
+  .text-about {
+    font-size:14px;
+    line-height:27px;
+    margin-top:0;
+    margin-bottom:30px;
+  }
+
+}
+
+// Company ページ
+.info-list {
+  font-size:14px;
+  margin-bottom:40px;
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    dt {
+      width:30%;
+      padding-top:20px;
+      padding-bottom:20px;
+      border-bottom:1px solid #DBDBDB;
+    }
+    dd {
+      width:70%;
+      margin-left:0;
+      padding-top:20px;
+      padding-bottom:20px;
+      border-bottom:1px solid #DBDBDB;
+    }
+    .first{
+      padding-top:10px;
+    }
+    .work-responsive{
+      padding-bottom:0;
+      border-bottom:none;
+    }
+    .work{
+      margin-left:180px;
+      padding-top:0;
+      padding-bottom:0;
+      border-bottom:none;
+    }
+  }
+}
+.iframe-wrp {
+  height:300px;
+  position: relative;
+  width: 100%;
+  iframe {
+    width: 100%;
+    height:100%;
+  }
+}
+.company {//フッターとの距離感覚調整。固定フッターの場合、wrapperにフッター分の高さをつけておく
+  padding-bottom:160px;
+}
+
 
 // footer setting  フッターの位置調整が面倒くさかったのでコピペー
 #footer {
