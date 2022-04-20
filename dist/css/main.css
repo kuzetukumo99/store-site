@@ -10,27 +10,22 @@
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
-
 .menu-btn .btn-line {
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
   background: #333;
 }
-
 .menu-btn.close {
   transform: rotate(180deg);
 }
-
 .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
   background-color: #fff;
 }
-
 .menu-btn.close .btn-line:nth-child(2) {
   opacity: 0;
 }
-
 .menu-btn.close .btn-line:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
   background-color: #fff;
@@ -45,11 +40,9 @@
   opacity: 0.7;
   visibility: hidden;
 }
-
 .menu.show {
   visibility: visible;
 }
-
 .menu-nav {
   position: fixed;
   top: -16px;
@@ -58,25 +51,20 @@
   overflow: hidden;
   background: black;
 }
-
 .menu .nav-item {
   padding-top: 12px;
   transform: translate3d(-40px, 0, 0);
   transition: all 0.5s ease-out;
 }
-
 .menu .nav-item:first-child {
   padding-top: 36px;
 }
-
 .menu .nav-item.show {
   transform: translate3d(0, 0, 0);
 }
-
 .menu .nav-item.current > a {
   color: #eece1a;
 }
-
 .menu .nav-link {
   display: inline-block;
   position: relative;
@@ -85,7 +73,6 @@
   color: #fff;
   text-decoration: none;
 }
-
 .menu .nav-link:hover {
   color: #eece1a;
 }
@@ -117,12 +104,12 @@ body {
   line-height: 1.5;
   position: relative;
   margin: 0;
+  min-height: 100vh;
 }
 
 .wrapper {
   width: 100%;
-  height: 100%;
-  max-width: 1360px !important;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -135,13 +122,11 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
 }
-
 h1.lg-heading, h2.lg-heading, h3.lg-heading {
   width: 200px;
   height: auto;
   line-height: 0;
 }
-
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
   margin-bottom: 32px;
 }
@@ -178,12 +163,54 @@ li {
   background-color: red;
 }
 
+.products-wrapper {
+  padding-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.7%;
+}
 .products-wrappera {
   display: inline-block;
+}
+
+.product-item img {
+  vertical-align: bottom;
+}
+.product-item p {
+  margin-top: 10px;
+  font-size: 12px;
 }
 
 .product-item:hover > .product-image {
   opacity: 0.7;
   transition: all 0.5s ease-out;
+}
+
+.detailLink {
+  margin: 40px auto 0 auto;
+  text-align: center;
+  padding-bottom: 160px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.sns {
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+}
+
+.copy {
+  font-size: 10px;
 }
 /*# sourceMappingURL=main.css.map */

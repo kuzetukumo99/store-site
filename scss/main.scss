@@ -16,11 +16,11 @@ body {
   line-height: 1.5;
   position: relative;
   margin:0;//ブラウザにデフォルトであるヘッダー上部の隙間を消すため
+  min-height:100vh;//コピペー
 }
 .wrapper {
   width: 100%;
-  height:100%;
-  max-width: 1360px !important;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -77,10 +77,24 @@ li{
 
 // Products
 .products-wrapper {
-  
+  padding-top:80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: repeat(4,1fr);
+  grid-template-columns: repeat(4,1fr);
+  gap:2.7%;
 
   &a{
     display:inline-block;
+  }
+}
+.product-item {
+  img {
+    vertical-align: bottom;
+  }
+  p {
+  margin-top:10px;
+  font-size:12px;
   }
 }
 
@@ -89,3 +103,29 @@ li{
     @include easeOut;
 }
 
+.detailLink {
+  margin: 40px auto 0 auto;
+  text-align:center;
+  padding-bottom:160px;
+}
+
+
+// footer setting  フッターの位置調整が面倒くさかったのでコピペー
+#footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+  left: 0;//left と right の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。
+  right: 0;//left と right の両方が定義された場合、他のプロパティで制約されていなければ、要素は両方を満たすように引き伸ばされます。
+}
+
+.sns {
+  padding:0;
+  display:flex;
+  gap:30px;
+  font-size:12px;
+}
+.copy {
+  font-size:10px;
+}
