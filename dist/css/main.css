@@ -194,6 +194,57 @@ li {
   padding-bottom: 160px;
 }
 
+.section-title {
+  padding-top: 120px;
+  font-size: 14px;
+  margin-bottom: -50px;
+}
+
+.pagenation {
+  margin-top: 80px;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-bottom: 160px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.detail-wrapper {
+  max-width: 800px;
+  padding-top: 80px;
+  display: flex;
+}
+.detail-wrapper .product-image {
+  width: 50%;
+}
+.detail-wrapper .text-area {
+  width: 50%;
+  padding-left: 65px;
+  font-size: 14px;
+}
+.detail-wrapper .text-area .text-detail, .detail-wrapper .text-area .product-price {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.detail-wrapper .text-area dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.detail-wrapper .text-area dl dt {
+  width: 30%;
+}
+.detail-wrapper .text-area dl dd {
+  margin-left: 0;
+  width: 70%;
+}
+
+.backProducts {
+  margin-top: 70px;
+  text-align: center;
+}
+
 #footer {
   display: flex;
   justify-content: space-between;

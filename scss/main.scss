@@ -1,9 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
-
-
-
 
 * {
   box-sizing: border-box;
@@ -109,6 +105,61 @@ li{
   padding-bottom:160px;
 }
 
+// Productsページ
+.section-title {
+  padding-top:120px;
+  font-size:14px;
+  margin-bottom:-50px;
+}
+.pagenation {
+  margin-top:80px;
+  margin-bottom:0;
+  padding-left:0;
+  padding-bottom:160px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+// Dtailsページ
+.detail-wrapper {
+  max-width: 800px;
+  padding-top:80px;
+  display:flex;
+
+  .product-image{
+    width:50%;
+  }
+
+  .text-area{
+    width:50%;
+    padding-left:65px;
+    font-size:14px;
+
+    .text-detail,.product-price{
+      margin-top:0;
+      margin-bottom:30px;
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      width:100%;
+      dt {
+        width: 30%;
+      }
+      dd {
+        margin-left:0;
+        width: 70%;
+      }
+    }
+  }
+}
+.backProducts {
+  margin-top:70px;
+  text-align:center;
+}
 
 // footer setting  フッターの位置調整が面倒くさかったのでコピペー
 #footer {
@@ -129,3 +180,13 @@ li{
 .copy {
   font-size:10px;
 }
+
+
+
+
+
+
+
+
+
+@import 'mobile';//cssの一番下に置く
