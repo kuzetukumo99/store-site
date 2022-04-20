@@ -57,7 +57,7 @@
     visibility: visible;//ハンバーガーメニューを押されると見える
   }
 
-  &-nav {// menu-navと同じらしい
+  &-nav {// menu-navと同じ意味らしい
     position:fixed;
     top:-16px;
     width:100%;
@@ -66,11 +66,19 @@
     background: darken($secondary-color, 60);
   }
   .nav-item{
-    padding-top:12px;
+    padding-top:12px; 
     &:first-child{
       padding-top:36px;
     }
-    &.current > a {// せっかくなので黄色にしてみる。
+    transform: translate3d(-40px,0,0);//最初は左側にメニュースタンバイ
+    @include easeOut;
+
+    &.show {
+      // Slide in from left
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {// せっかくなのでホバー時に黄色にしてみる。
       color: $tertiary-color;
     }
   }
@@ -87,3 +95,13 @@
     }
   }
 }
+
+//for(lex x = 0; i < 4; i++)
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 { //nav-imte各それぞれについてディレイをかける
+  .nav-item:nth-child( #{$x} ) {
+    transition-delay: $x * 0.1s;
+  }
+}
+
+
