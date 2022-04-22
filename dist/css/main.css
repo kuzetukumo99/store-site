@@ -160,7 +160,6 @@ li {
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  background-color: red;
 }
 
 .products-wrapper {
@@ -187,10 +186,13 @@ li {
   transition: all 0.5s ease-out;
 }
 
-.detailLink {
-  margin: 40px auto 0 auto;
+.detailLink-parent {
   text-align: center;
-  padding-bottom: 160px;
+}
+.detailLink-parent .detailLink-item {
+  display: inline-block;
+  margin: 40px auto 160px auto;
+  text-align: center;
 }
 
 .section-title {
@@ -240,7 +242,7 @@ li {
 }
 
 .backProducts {
-  margin-top: 70px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -295,6 +297,7 @@ li {
   height: 300px;
   position: relative;
   width: 100%;
+  filter: grayscale(100%);
 }
 .iframe-wrp iframe {
   width: 100%;
@@ -323,5 +326,64 @@ li {
 
 .copy {
   font-size: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  main .products-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px 6%;
+  }
+  main .products-wrapper .product-price {
+    margin-bottom: 0;
+  }
+  main .detailLink-parent .detailLink-item {
+    margin: 30px auto 160px auto;
+  }
+  main .pagenation {
+    margin-top: 40px;
+    padding-bottom: 160px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  main .detail-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  main .detail-wrapper .product-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  main .detail-wrapper .text-area {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .backProducts {
+    margin-top: 40px;
+    padding-bottom: 160px;
+    text-align: center;
+  }
+  main .info-list dl dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  main .info-list dl dd {
+    width: 100%;
+    padding-top: 5px;
+  }
+  main .info-list .work {
+    margin-left: 0;
+  }
+
+  #footer {
+    display: block;
+  }
+  #footer .sns {
+    margin-bottom: 0;
+  }
+  #footer .copy {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
